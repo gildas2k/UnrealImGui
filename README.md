@@ -10,9 +10,11 @@ Dear ImGui is an immediate-mode graphical user interface library that is very li
 Status
 ------
 
+Repository url: https://github.com/gildas2k/UnrealImGui
+
 Version: 1.3
 
-This fork has been made from [segross/UnrealImGui](https://github.com/segross/UnrealImGui) in Decembre 2021.
+It's a fork of [segross/UnrealImGui](https://github.com/segross/UnrealImGui) since Decembre 2021.
 
 It includes:
 - ImGui version: 1.83
