@@ -5,6 +5,10 @@ Versions marked as 'unofficial' are labelled only for the needs of this changelo
 Change History
 --------------
 
+Version: 1.3 (2021/12)
+- Set ImGui to v1.83
+- Add NetImGui version 1.6.0
+
 Version: 1.22 (2021/04)
 - Fixed potential for initialization fiasco when using delegates container.
 - Fixed bug in code protecting redirecting handles from self-referencing.
@@ -30,7 +34,7 @@ Transition to IWYU and maintenance:
 - Replaced custom scope guards with the template provided by the engine.
 
 Version: 1.19 (2020/03-06)
-- Integrated fix for issue with ImGui popup/modal windows not being able to be closed in transparent mouse input mode. 
+- Integrated fix for issue with ImGui popup/modal windows not being able to be closed in transparent mouse input mode.
 - Integrated first version of Adaptive Canvas Size.
 - Added different options to define canvas size, with Adaptive Canvas Size being one of the options (viewport).
 - Added option for DPI scaling.
@@ -66,7 +70,7 @@ Version: 1.14 (2019/03)
 
 Version: 1.13 (unofficial) (2019/03)
 - Fixed mapping from FKey to ImGui key index to gracefully handle unsupported keys and work on platforms that do not support all the keys defined in ImGui key map.
-- Fixed non-unity compile warnings and errors. 
+- Fixed non-unity compile warnings and errors.
 
 Version: 1.12 (unofficial) (2018/12)
 - Added support for sharing with game keyboard and gamepad input.

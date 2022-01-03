@@ -9,13 +9,15 @@ Dear ImGui is an immediate-mode graphical user interface library that is very li
 
 Status
 ------
-Version: 1.22
 
-ImGui version: 1.83
+Version: 1.3
 
-NetImGui version: 1.6.0
+This fork has been made from [segross/UnrealImGui](https://github.com/segross/UnrealImGui) in Decembre 2021.
 
-Supported engine version: 4.26*
+It includes:
+- ImGui version: 1.83
+- NetImGui version: 1.6.0
+- Supported engine version: 4.26*
 
 \* *Plugin has been tested and if necessary updated to compile and work with this engine version. As long as possible I will try to maintain backward compatibility of existing features and possibly but not necessarily when adding new features. When it comes to bare-bone ImGui version it should be at least backward compatible with the engine version 4.15. For NetImgui it needs to be determined.*
 
