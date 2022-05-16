@@ -189,9 +189,9 @@ void FImGuiModuleManager::AddWidgetToViewport(UGameViewportClient* GameViewport)
 	int32 ContextIndex;
 	auto& ContextProxy = ContextManager.GetWorldContextProxy(*GameViewport->GetWorld(), ContextIndex);
 
-	// Make sure that textures are loaded before the first Proxy Context is created.
-	LoadTextures();
-
+    // Make sure that textures are loaded before the first Proxy Context is created.
+    LoadTextures();
+    
 	// Create and initialize the widget.
 	TSharedPtr<SImGuiLayout> SharedWidget;
 	SAssignNew(SharedWidget, SImGuiLayout).ModuleManager(this).GameViewport(GameViewport).ContextIndex(ContextIndex);

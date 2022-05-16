@@ -23,7 +23,7 @@
 #endif
 
 //=================================================================================================
-// If 'NETIMGUI_ENABLED' hasn't been defined yet (in project settings or NetImgui_Config.h') 
+// If 'NETIMGUI_ENABLED' hasn't been defined yet (in project settings or NetImgui_Config.h')
 // we define this library as 'Disabled'
 //=================================================================================================
 #if !defined(NETIMGUI_ENABLED)
@@ -39,12 +39,12 @@
 //=================================================================================================
 // List of texture format supported
 //=================================================================================================
-#if NETIMGUI_ENABLED
-namespace NetImgui 
-{ 
-enum class eTexFormat : uint8_t { 
-	kTexFmtA8, 
-	kTexFmtRGBA8, 
+// #if NETIMGUI_ENABLED
+namespace NetImgui
+{
+enum class eTexFormat : uint8_t {
+	kTexFmtA8,
+	kTexFmtRGBA8,
 	kTexFmt_Count,
 	kTexFmt_Invalid=kTexFmt_Count };
 
@@ -63,12 +63,12 @@ bool				Startup(void);
 void				Shutdown(bool bWait);
 
 //=================================================================================================
-// Try to establish a connection to NetImgui server application. 
+// Try to establish a connection to NetImgui server application.
 //
 // Can establish connection with netImgui Server application by either reaching it directly
 // using 'ConnectToApp' or waiting for Server to reach us after Client called 'ConnectFromApp'.
 //
-// Note:	Start a new communication thread using std::Thread by default, but can receive custom 
+// Note:	Start a new communication thread using std::Thread by default, but can receive custom
 //			thread start function instead (Look at ClientExample 'CustomCommunicationThread').
 //-------------------------------------------------------------------------------------------------
 // clientName		: Named that will be displayed on the Server, for this Client
@@ -89,17 +89,17 @@ void				Disconnect(void);
 //=================================================================================================
 // True if connected to netImguiApp server
 //=================================================================================================
-bool				IsConnected(void);
+IMGUI_API bool				IsConnected(void);
 
 //=================================================================================================
-// True if connection request is waiting to be completed. For example, while waiting for  
+// True if connection request is waiting to be completed. For example, while waiting for
 // Server to reach ud after having called 'ConnectFromApp()'
 //=================================================================================================
 bool				IsConnectionPending(void);
 
 //=================================================================================================
-// True when Dear ImGui is currently expecting draw commands 
-// This means that we are between NewFrame() and EndFrame() 
+// True when Dear ImGui is currently expecting draw commands
+// This means that we are between NewFrame() and EndFrame()
 //=================================================================================================
 bool				IsDrawing(void);
 
@@ -117,7 +117,7 @@ void				SendDataTexture(ImTextureID textureId, void* pData, uint16_t width, uint
 
 //=================================================================================================
 // Start a new Imgui Frame and wait for Draws commands, using a ImGui created internally
-// for remote drawing. Returns true if we are awaiting a new ImGui frame. 
+// for remote drawing. Returns true if we are awaiting a new ImGui frame.
 //
 // All ImGui drawing can be skip when false.
 //
@@ -156,7 +156,7 @@ void				SetBackground(const ImVec4& bgColor, const ImVec4& textureTint, ImTextur
 uint8_t				GetTexture_BitsPerPixel	(eTexFormat eFormat);
 uint32_t			GetTexture_BytePerLine	(eTexFormat eFormat, uint32_t pixelWidth);
 uint32_t			GetTexture_BytePerImage	(eTexFormat eFormat, uint32_t pixelWidth, uint32_t pixelHeight);
-} 
+}
 
 //=================================================================================================
 // Optional single include compiling option
@@ -174,6 +174,6 @@ uint32_t			GetTexture_BytePerImage	(eTexFormat eFormat, uint32_t pixelWidth, uin
 #include "Private/NetImgui_NetworkWin32.cpp"
 
 #endif
-#endif // NETIMGUI_ENABLED
+// #endif // NETIMGUI_ENABLED
 
 #include "Private/NetImgui_WarningReenable.h"

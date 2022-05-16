@@ -10,10 +10,10 @@
 
 #if NETIMGUI_ENABLED
 //=================================================================================================
-// Set the path to 'imgui.h' used by your codebase here. 
+// Set the path to 'imgui.h' used by your codebase here.
 // Also suppress a few warnings imgui.h generates in 'warning All' (-Wall)
 //=================================================================================================
-#include "Private/NetImgui_WarningDisableImgui.h" 
+#include "Private/NetImgui_WarningDisableImgui.h"
 #include <imgui.h>
 
 // This test is only to reduce compile time when this header isn't needed
@@ -38,8 +38,8 @@ constexpr uint32_t kDefaultClientPort = 8889;	//!< Default port Client waits for
 // Enable default Win32/Posix networking code
 // Note:	By default, netImgui uses Winsock on Windows and Posix sockets on other platforms
 //
-//			The use your own code, turn off both NETIMGUI_WINSOCKET_ENABLED, 
-//			NETIMGUI_POSIX_SOCKETS_ENABLED and provide your own implementation of the functions 
+//			The use your own code, turn off both NETIMGUI_WINSOCKET_ENABLED,
+//			NETIMGUI_POSIX_SOCKETS_ENABLED and provide your own implementation of the functions
 //			declared in 'NetImgui_Network.h'.
 //=================================================================================================
 #if !defined(NETIMGUI_WINSOCKET_ENABLED) && !defined(__UNREAL__)
@@ -55,4 +55,4 @@ constexpr uint32_t kDefaultClientPort = 8889;	//!< Default port Client waits for
 #endif
 
 // Disable auto interception of ImGui::NewFrame() / ImGui::Render()
-//#define NETIMGUI_IMGUI_CALLBACK_ENABLED 0
+#define NETIMGUI_IMGUI_CALLBACK_ENABLED 0
